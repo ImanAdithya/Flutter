@@ -49,6 +49,8 @@ class HomePage extends StatelessWidget {
                   icon: Icon(Icons.more_vert,size: 30.0,color: Colors.white,)
               ),
             ],
+            
+            flexibleSpace: Image.asset("assets/back.jpg")
 
           ),
 
