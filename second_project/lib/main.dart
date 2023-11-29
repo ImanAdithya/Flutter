@@ -31,26 +31,29 @@ class HomePage extends StatelessWidget {
       home: Scaffold(
 
           appBar: AppBar(
-            title: Text("HOME"),
+            title: const Text("HOME",style: TextStyle(color: Colors.black,fontSize: 25.0,fontWeight: FontWeight.bold)),
 
             leading: const IconButton(
-              icon: Icon(Icons.menu,size: 40.0,color: Colors.white,),
+              icon: Icon(Icons.menu,size: 40.0,color: Colors.black,),
               onPressed:null,//onPressed: ()=> funtion(),
             ),
 
             actions: const [
                IconButton(
                    onPressed: null,
-                   icon: Icon(Icons.search,size: 30.0,color: Colors.white,)
+                   icon: Icon(Icons.search,size: 30.0,color: Colors.black,)
                ),
 
               IconButton(
                   onPressed: null,
-                  icon: Icon(Icons.more_vert,size: 30.0,color: Colors.white,)
+                  icon: Icon(Icons.more_vert,size: 30.0,color: Colors.black,)
               ),
             ],
             
-            flexibleSpace: Image.asset("assets/back.jpg")
+            flexibleSpace: Image.asset(
+                "assets/back.jpg",
+                fit: BoxFit.cover,
+            )
 
           ),
 
