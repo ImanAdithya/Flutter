@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
 
           appBar: AppBar(
