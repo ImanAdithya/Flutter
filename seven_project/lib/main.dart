@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
       ),
        home: const MyHomePage(title: 'Flutter Navigation'),
       // home: SecondScreen(),
+
+      // routes: <String,WidgetBuilder>{
+      //   '/second':(context)=>SecondScreen(),
+      // },
     );
   }
 }

@@ -32,9 +32,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
+         // Navigator.of(context).pushNamed('/second');//A Route/Navigation Mechanesm
           Navigator.of(context).push(MaterialPageRoute(
               builder: (_){
-                return SecondScreen();
+                return  SecondScreen("Second Scren parameter");
               }
           ));
         },

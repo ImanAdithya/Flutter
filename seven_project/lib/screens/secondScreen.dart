@@ -4,6 +4,12 @@ import 'package:seven_project/screens/homePage.dart';
 
 class SecondScreen extends StatelessWidget {
 
+   String text="x";
+
+  SecondScreen(String text){
+      this.text=text;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,12 +25,12 @@ class SecondScreen extends StatelessWidget {
           },
         ),
       ),
-      body: const Center(
+      body:  Center(
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:<Widget> [
             Text(
-              "Second Screen Body",
+               text,
                style:TextStyle(fontSize: 30.0) ,
             ),
           ],
