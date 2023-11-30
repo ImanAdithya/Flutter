@@ -33,14 +33,14 @@ class HomePage extends StatelessWidget {
         home: Scaffold(
 
           appBar: AppBar(
-              title: const Text("HOME",style: TextStyle(color: Colors.white,fontSize: 25.0,fontWeight: FontWeight.bold)),
+              title: const Text("HOME",style: TextStyle(color: Colors.white,fontSize: 25.0,fontWeight: FontWeight.bold)),//Title
 
-              leading: const IconButton(
+              leading: const IconButton(//left sie menu bar
                 icon: Icon(Icons.menu,size: 40.0,color: Colors.white,),
                 onPressed:null,//onPressed: ()=> funtion(),
               ),
 
-              actions: const [
+              actions: const [//right size icons
                 IconButton(
                     onPressed: null,
                     icon: Icon(Icons.search,size: 30.0,color: Colors.white,)
@@ -52,19 +52,31 @@ class HomePage extends StatelessWidget {
                 ),
               ],
 
-              flexibleSpace: Image.asset(
-                "assets/redBack.jpg",
-                fit: BoxFit.cover,
-              ),
+              // flexibleSpace: Image.asset(//Give BackGround color to AppBar
+              //   "assets/redBack.jpg",
+              //   fit: BoxFit.cover,
+              // ),
 
-              bottom:const TabBar(
+              bottom:const TabBar(//Add Tab Bar Icons
                 tabs: [
-                  Tab(icon: Icon(Icons.directions_car,)),
-                  Tab(icon: Icon(Icons.directions_transit)),
-                  Tab(icon: Icon(Icons.directions_bike)),
+                  Tab(
+                      icon: Icon(Icons.directions_car),
+                      text: "Car",
+                  ),
+                  Tab(
+                      icon: Icon(Icons.directions_transit),
+                      text:"Train",
+                  ),
+                  Tab(
+                      icon: Icon(Icons.directions_bike),
+                      text: "Bike",
+                  ),
                 ],
               ),
-            
+
+            elevation: 3.0,//Drop Shadow
+
+            backgroundColor:Colors.pink ,//Give b
           ),
           
           body: TabBarView(
