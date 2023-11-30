@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
            Text("Text 3",style: TextStyle(fontSize: 20.0),),
            Column(
              mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+             children: [
               Text("Text 1",style: TextStyle(fontSize: 20.0),),
               Text("Text 2",style: TextStyle(fontSize: 20.0),),
               Text("Text 3",style: TextStyle(fontSize: 20.0),),
