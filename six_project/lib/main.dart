@@ -32,8 +32,10 @@ class _MyHomePageState extends State<MyHomePage> {// _MyHomePage ==> private cla
   int count=0;
 
   void increment(){
-    count++;
-    print(count);
+    setState(() {
+      count++;
+      print(count);
+    });
   }
 
   @override
