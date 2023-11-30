@@ -53,7 +53,11 @@ class HomePage extends StatelessWidget {
             flexibleSpace: Image.asset(
               "assets/back.jpg",
               fit: BoxFit.cover,
-            )
+            ),
+
+            bottom:PreferredSize(child: Container(),
+                preferredSize: Size.fromHeight(70.0)),
+
 
         ),
 
