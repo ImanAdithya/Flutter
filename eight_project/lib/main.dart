@@ -1,4 +1,5 @@
 import 'package:eight_project/practise_2.dart';
+import 'package:eight_project/practise_3.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Practise_2(),
+      //home: Practise_2(),
+      home: Practise_3(),
     );
   }
 }
@@ -44,33 +46,68 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 
-      body:ListView(
-        children: <Widget>[
-          Container(
-            height: 200.0,
-            color: Colors.blue,
-          ),
-          Container(
-            height: 200.0,
-            color: Colors.red,
-          ),
-          Container(
-            height: 200.0,
-            color: Colors.yellow,
-          ),
-          Container(
-            height: 200.0,
-            color: Colors.green,
-          ),
-          Container(
-            height: 200.0,
-            color: Colors.orange,
-          ),
-          Container(
-            height: 200.0,
-            color: Colors.black,
-          ),
-        ],
+      body:Container(//full hight ekm gnno
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children:  <Widget>[
+            ListTile(
+              leading: Icon(Icons.brightness_auto),
+              title: Text("Brightness Auto"),
+              subtitle: Text("Change the Brightness"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text("Change Image"),
+              subtitle: Text("Change the Image"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.keyboard),
+              title: Text("Keyboard Layout"),
+              subtitle: Text("Change the Keyboard Layout"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.build),
+              title: Text("Setting"),
+              subtitle: Text("Change Setting"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.nature_people),
+              title: Text("Near"),
+              subtitle: Text("Change the Image"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.ac_unit),
+              title: Text("Change Image"),
+              subtitle: Text("Change the Image"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text("Change Image"),
+              subtitle: Text("Change the Image"),
+              trailing: Icon(Icons.menu),
+              onTap: (){},
+            ),
+
+          ],
+        ),
       ),
     );
   }
