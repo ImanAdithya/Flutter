@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seven_project/screens/homePage.dart';
+
 
 class SecondScreen extends StatelessWidget {
 
@@ -9,6 +11,12 @@ class SecondScreen extends StatelessWidget {
         title: const Text(
             "Second Screen App Bar",
             style: TextStyle(fontSize: 20.0),
+        ),
+        leading: IconButton(
+          icon:Icon(Icons.home),
+          onPressed: () {
+            Navigator.pop(context,MyHomePage(title:"",));
+          },
         ),
       ),
       body: const Center(
