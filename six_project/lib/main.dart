@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget {//page dynamic changes=>StatefulWidget
   @override
   State<MyHomePage> createState() => _MyHomePageState();//statefull widget ekaka class 2i
 }
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {// _MyHomePage ==> private cla
   int count=0;
 
   void increment(){
-    setState(() {
+    setState(() {//build method eka re called kirimak wage
       count++;
       print(count);
     });
