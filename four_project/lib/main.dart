@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        brightness: Brightness.dark,
+        primarySwatch: Colors.orange
       ),
       home:MyHomePage(),
     );
@@ -29,8 +29,27 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return Scaffold(
+
+      appBar: AppBar(
+        title: Text("FLUTEER DEMO"),
+      ),
+
+      body: Container(
+        margin:const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0), //all() = all sides
+        padding: const EdgeInsets.only(top: 20.0 ),
+        //padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
+        //padding: const EdgeInsets.all(30.0),
+        color: Colors.orange,
+        height: 200.0,
+        width: double.infinity,
+        child: const Text(
+          "Container Text" ,
+          style: TextStyle(
+              fontSize: 25.0
+          ),
+        ),
+      ),
 
     );
   }
