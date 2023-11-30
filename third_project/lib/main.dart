@@ -27,41 +27,49 @@ class MyApp extends StatelessWidget{
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return DefaultTabController(
+      length: 3,
+      child: MaterialApp(
+        home: Scaffold(
 
-        appBar: AppBar(
-            title: const Text("HOME",style: TextStyle(color: Colors.black,fontSize: 25.0,fontWeight: FontWeight.bold)),
+          appBar: AppBar(
+              title: const Text("HOME",style: TextStyle(color: Colors.black,fontSize: 25.0,fontWeight: FontWeight.bold)),
 
-            leading: const IconButton(
-              icon: Icon(Icons.menu,size: 40.0,color: Colors.black,),
-              onPressed:null,//onPressed: ()=> funtion(),
-            ),
-
-            actions: const [
-              IconButton(
-                  onPressed: null,
-                  icon: Icon(Icons.search,size: 30.0,color: Colors.black,)
+              leading: const IconButton(
+                icon: Icon(Icons.menu,size: 40.0,color: Colors.black,),
+                onPressed:null,//onPressed: ()=> funtion(),
               ),
 
-              IconButton(
-                  onPressed: null,
-                  icon: Icon(Icons.more_vert,size: 30.0,color: Colors.black,)
+              actions: const [
+                IconButton(
+                    onPressed: null,
+                    icon: Icon(Icons.search,size: 30.0,color: Colors.black,)
+                ),
+
+                IconButton(
+                    onPressed: null,
+                    icon: Icon(Icons.more_vert,size: 30.0,color: Colors.black,)
+                ),
+              ],
+
+              flexibleSpace: Image.asset(
+                "assets/back.jpg",
+                fit: BoxFit.cover,
               ),
-            ],
 
-            flexibleSpace: Image.asset(
-              "assets/back.jpg",
-              fit: BoxFit.cover,
-            ),
+              bottom:const TabBar(
+                tabs: [
+                  Tab(icon: Icon(Icons.directions_car)),
+                  Tab(icon: Icon(Icons.directions_transit)),
+                  Tab(icon: Icon(Icons.directions_bike)),
+                ],
+              ),
 
-            bottom:PreferredSize(child: Container(),
-                preferredSize: Size.fromHeight(70.0)),
+
+          ),
 
 
         ),
-
-
       ),
     );
   }
