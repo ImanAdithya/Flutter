@@ -1,5 +1,6 @@
 import 'package:eight_project/practise_2.dart';
 import 'package:eight_project/practise_3.dart';
+import 'package:eight_project/practise_4.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
       //home: Practise_2(),
-      home: Practise_3(),
+      home: Practise_4(),
     );
   }
 }
