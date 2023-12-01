@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(
+      DevicePreview(
+        builder: (context) => MyApp(), // Wrap your app
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,33 +21,57 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text("Flutter Demo"),
+      ),
+      body: const Center(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: TextField(
+                maxLength: 8,
+                style: TextStyle(
+                  fontSize: 15.0,
+                ),
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: "Search",
+                    prefixIcon: Icon(Icons.search)),
+                // cursorColor: Colors.black,
+                // enabled: false,
+                // autofocus: true,
+                // obscureText: true,//use for password field
+                // keyboardType: TextInputType.number//limited for number keyboard,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: TextField(
+                maxLength: 10,
+                style: TextStyle(fontSize: 22.0),
+                // autofocus: true,
+                // obscureText: true,//use for password field
+                // keyboardType: TextInputType.number//limited for number keyboard,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
