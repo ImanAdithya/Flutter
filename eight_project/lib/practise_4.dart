@@ -19,7 +19,7 @@ class _Practise_4 extends State<Practise_4> {
 
       body: ListView.builder(
           itemCount:items.length,
-          itemBuilder: (context,index){//more list view mechanism //memoery concisume
+          itemBuilder: (context,index){//more list view mechanism //memoery concuume
             return ListTile(
               title: Text(items[index]),
             );
