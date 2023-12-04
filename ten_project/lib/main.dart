@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:ten_project/NetworkRequest.dart';
+import 'package:ten_project/Streem.dart';
 import 'package:ten_project/networkRequest2.dart';
 
 
@@ -17,12 +18,12 @@ class MyApp extends StatelessWidget {
     //   builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.dark,
+
         primarySwatch: Colors.blue,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
       //home: Practise_2(),
-      home: MyHomePage(),
+      home:test3(),
     );
   }
 }
