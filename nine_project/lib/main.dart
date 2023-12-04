@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:nine_project/Forms.dart';
+import 'package:nine_project/formValidate.dart';
 
 void main() => runApp(
       DevicePreview(
@@ -21,7 +23,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      // home: PractiseForm(),
+      home: FormValidate(),
     );
   }
 }
@@ -32,25 +36,48 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  TextEditingController textField=TextEditingController();
+  TextEditingController textField = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    textField.text="POP";
+    textField.text = "POP";
+    String getValue = textField.text;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Flutter Demo"),
+        backgroundColor: Colors.white,
+        title: TextField(
+          keyboardType: TextInputType.text,
+          controller: textField,
+          decoration: InputDecoration(
+              prefixIcon: const Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              suffixIcon: IconButton(
+                icon: const Icon(
+                  Icons.close,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  textField.text = "";
+                },
+              ),
+              border: InputBorder.none,
+              filled: true,
+              hintText: "Search...",
+              hintStyle: const TextStyle(
+                color: Colors.white70,
+              )),
+        ),
       ),
-      body:   Center(
+      body: Center(
         child: Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(5.0),
               child: TextField(
-               // onChanged: (text){print(text);},//Always changed when enter words use in Search
-               // onSubmitted: (text){print(text);},//when click succuss button can get value
+                // onChanged: (text){print(text);},//Always changed when enter words use in Search
+                // onSubmitted: (text){print(text);},//when click succuss button can get value
                 controller: textField,
                 maxLength: 8,
                 style: const TextStyle(
@@ -68,10 +95,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(0.0),
               child: TextField(
                 maxLength: 10,
                 style: TextStyle(fontSize: 22.0),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
               ),
             ),
           ],
